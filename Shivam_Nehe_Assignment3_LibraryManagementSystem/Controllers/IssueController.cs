@@ -37,8 +37,8 @@ namespace LibraryManagementSystem.Controllers
 
         private Container GetBookContainer()
         {
-            var bookDatabaseName = "LibraryManager"; // Assuming the same database, adjust if different
-            var bookContainerName = "Book"; // Adjust to your actual container name for books
+            var bookDatabaseName = "LibraryManager"; 
+            var bookContainerName = "Book"; 
             CosmosClient cosmosClient = new CosmosClient(URI, PrimaryKey);
             Database database = cosmosClient.GetDatabase(bookDatabaseName);
             return database.GetContainer(bookContainerName);
